@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Boter, kaas en eieren</title>
+        <style>
+            body {
+                font-size: 2em;
+                font-family: monospace;
+                text-align: center;
+            }
+
+            #game {
+                display: flex;
+                position: absolute;
+                left: 0px;
+                top: 0px;
+                right: 0px;
+                bottom: 0px;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .square {
+                height: 180px;
+                width: 180px;
+                float: left;
+                border: 1px solid black;
+            }
+
+            .square:hover {
+                cursor: pointer;
+            }
+
+            .left {
+                border-left: none;
+            }
+
+            .right {
+                border-right: none;
+            }
+
+            .top {
+                border-top: none;
+            }
+
+            .bottom {
+                border-bottom: none;
+            }
+
+            .o::after {
+                content: "O";
+            }
+
+            .x::after {
+                content: "X";
+            }
+
+            .o, .x {
+                content: "o";
+                font-size: 180px;
+                line-height: 180px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <span id="message"></span>
+        <div id="game">
+            <div>
+                <div class="square top left"></div>
+                <div class="square top center"></div>
+                <div class="square top right"></div>
+            </div>
+            <div>
+                <div class="square middle left"></div>
+                <div class="square middle center"></div>
+                <div class="square middle right"></div>
+            </div>
+            <div>
+                <div class="square bottom left"></div>
+                <div class="square bottom center"></div>
+                <div class="square bottom right"></div>
+            </div>
+        </div>
+
+        <script src="index.js"></script>
+    </body>
+</html>
